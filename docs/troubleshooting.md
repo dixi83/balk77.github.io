@@ -57,5 +57,6 @@ You will need to upload the firmware with a USB-C cable.
   > 4. Open a terminal windows and install esptool using pip 
   >    `pip install esptool` [more info](https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html)
   > 5. Navigate to the folder where you extracted the firmware.
-  > 6. For Windows, you can just run the `flash.bat` file. For the other OS's you will need to run this command:
+  > 6. Plugin the USB-C cable in to the Button+
+  > 7. For Windows, you can just run the `flash.bat` file. For the other OS's you will need to run this command:
   >    `python -m esptool --chip esp32s3 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader.bin 0x8000 partitions.bin 0xa000 ota_data_initial.bin 0x10000 firmware.bin`
